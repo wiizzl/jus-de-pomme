@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     keywords: config.keywords,
     authors: [{ name: "Pierre Houllière", url: "https://pierreh.vercel.app" }],
     creator: "Pierre Houllière",
-    metadataBase: new URL("http://localhost:3000"),
+    metadataBase: new URL("https://jus-de-pomme.vercel.app"),
 };
 
 type RootLayoutProps = Readonly<{
