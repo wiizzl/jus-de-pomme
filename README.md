@@ -1,4 +1,4 @@
-# jus-de-pomme
+# jus-de-raison
 
 ![](./app/opengraph-image.png)
 

@@ -1,6 +1,6 @@
 const config = {
-    title: "Jus de Pomme",
-    description: "Et si vous deviez v🍏ter ?",
+    title: "Jus de Raisin",
+    description: "Et si vous deviez v🍇ter ?",
     keywords: ["vote", "2027", "france", "démocratie", "politique"],
 
     Navigation: [
