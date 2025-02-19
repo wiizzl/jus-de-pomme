@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
@@ -37,6 +38,7 @@ export default function RootLayout(props: RootLayoutProps) {
             <body className={`${inter.className} antialiased select-none`}>
                 <Loading />
                 {props.children}
+                <Analytics />
             </body>
         </html>
     );
