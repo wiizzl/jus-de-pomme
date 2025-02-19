@@ -1,0 +1,45 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = "file:./dev.db"
+}
+
+model Candidate {
+    id    String @id @default(cuid())
+    votes Int    @default(0)
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    Vote Vote[]
+}
+
+model Vote {
+    id String @id @default(cuid())
+
+    candidate   Candidate @relation(fields: [candidateId], references: [id])
+    candidateId String
+
+    deviceId String
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    Policies Policies[]
+}
+
+model Policies {
+    id String @id @default(cuid())
+
+    name        String
+    description String
+
+    vote   Vote   @relation(fields: [voteId], references: [id])
+    voteId String
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
